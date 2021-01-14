@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
-        primaryColor: Colors.black,
+        
         visualDensity: VisualDensity.adaptivePlatformDensity,
 
       ),
@@ -36,12 +35,21 @@ class MyHomePage extends StatefulWidget{
 class _MyHomePageState extends State<MyHomePage> {
   Color backgroundColor;
 
+
+
+  //Change the variable @backgroundColor
   void changeColor(){
     setState(() {
       backgroundColor  = genRandomColor();
     });
   }
 
+
+
+  /*
+  Function to generate Random Color from RGB;
+  returns a new random Color
+   */
   Color genRandomColor(){
     var rng = new Random();
     return Color.fromARGB(100, rng.nextInt(255), rng.nextInt(255), rng.nextInt(255));
